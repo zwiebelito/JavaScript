@@ -1,0 +1,7 @@
+body {
+    margin: 0;
+    display: grid;
+    height: 100vh;
+    grid-template-columns: 40% 40%;
+    justify-content: space-around;
+}
