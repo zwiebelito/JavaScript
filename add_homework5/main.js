@@ -50,7 +50,7 @@ console.log(getMaxNumber([45,57,36,78,98,195,579,341]));
 
 // - створити функцію яка повертає найменьше число з масиву
 
-let getMinNumber = (arr) =>{ // -4, -5, -1, -8
+let getMinNumber = (arr) =>{
     let mim = arr[0]
     for (let i = 0;  i < arr.length; i++){
         if (arr[i] < mim){
@@ -88,12 +88,12 @@ naturalNumber(4);
 
 let getNums = (a, b) => {
     if (a < b){
-        for (let i = a; i  < b;  i++){
+        for (let i = a; i < b;  i++){
             console.log(i)
         }
     }
-    else if (a  > b){
-        for (let  i = a; i > b; i-- ){
+    else if (a > b){
+        for (let i = a; i > b; i-- ){
             console.log(i)
         }
     }
@@ -129,7 +129,7 @@ console.log(change([9,8,0,4], 0));
 let zeroGoEnd = (array) =>{
     let firstArr = [];
     let secondArr = [];
-    for (let i =0; i<array.length; i++){
+    for (let i= 0; i < array.length; i++){
         if (array[i]===0){
             firstArr.push(array[i])
         }
