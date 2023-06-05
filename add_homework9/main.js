@@ -326,6 +326,22 @@ for (const element of usersList) {
 // характеристику headings,всі параграфи покласти в характеристику (масив) paragraphs
 
 
+let array = [];
+
+function explorer (htmlElement){
+    let children = htmlElement.children;
+    if (children.length !== 0){
+        for (const child of children) {
+            explorer(child)
+            array.push(child)
+        }
+    }
+}
+
+explorer(document.body)
+console.log(array)
+
+
 
 
 
