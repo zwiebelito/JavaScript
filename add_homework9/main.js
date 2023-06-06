@@ -246,19 +246,15 @@ for (const element of usersList) {
 
 
     let h4 = document.createElement('h2');
-    h4.classList.add('header');
     h4.innerText = `ID: ${element.id}`;
 
     let h4_1 = document.createElement('h2');
-    h4_1.classList.add('header');
     h4_1.innerText = `Name: ${element.name}`;
 
     let h2 = document.createElement('h2');
-    h2.classList.add('header');
     h2.innerText = `Username: ${element.username}`;
 
     let h2_1 = document.createElement('h2');
-    h2_1.classList.add('header');
     h2_1.innerText = `Email: ${element.email}`;
 
 
@@ -286,26 +282,20 @@ for (const element of usersList) {
     lng.innerText = `Lng: ${element.address.geo.lng}`;
 
     let phone = document.createElement('h2');
-    phone.classList.add('header');
     phone.innerText = `Phone: ${element.phone}`;
 
     let website = document.createElement('h2');
-    website.classList.add('header');
     website.innerText = `Website: ${element.website}`;
 
     let company = document.createElement('h2');
-    company.classList.add('header');
 
-    let name = document.createElement('h6');
-    name.classList.add('header');
+    let name = document.createElement('h2');
     name.innerText = `Name of company: ${element.company.name}`;
 
-    let catchPhrase = document.createElement('h6');
-    catchPhrase.classList.add('header');
+    let catchPhrase = document.createElement('h2');
     catchPhrase.innerText = `Catchphrase: ${element.company.catchPhrase}`;
 
-    let bs = document.createElement('h6');
-    bs.classList.add('header');
+    let bs = document.createElement('h2');
     bs.innerText = `Bs: ${element.company.bs}`;
 
     company.append(name, catchPhrase, bs);
@@ -325,23 +315,26 @@ for (const element of usersList) {
 // за допомоги рекурсії перебрати структуру сторінки. зробити об'єкт, всі заголовки покласти в (масив)
 // характеристику headings,всі параграфи покласти в характеристику (масив) paragraphs
 
+let paragraphs = [];
+let headings = [];
 
-let array = [];
 
 function explorer (htmlElement){
     let children = htmlElement.children;
     if (children.length !== 0){
         for (const child of children) {
             explorer(child)
-            array.push(child)
+            if (child.tagName.toLowerCase() === 'p'){
+              paragraphs.push(child.innerText)
+            } else if (child.tagName.toLowerCase() === 'h2'){
+                headings.push(child.innerText);
+            }
         }
     }
 }
 
 explorer(document.body)
-console.log(array)
 
-
-
-
+let obj = {paragraphs, headings};
+console.log(obj);
 
