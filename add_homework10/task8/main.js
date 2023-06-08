@@ -32,3 +32,17 @@ for (let user of usersWithAddress) {
     document.body.appendChild(div);
 }
 
+checkbox2.addEventListener('click', function (e){
+    e.preventDefault();
+    if (checkbox2.checked === true){
+        let filter29 = usersWithAddress.filter(value => value.age >= 29);
+        for (const item of filter29) {
+            let div2 = document.createElement('div');
+            let blockUser2 = document.createElement('div');
+            blockUser2.innerText = `ID: ${item.id}, name: ${item.name}, age: ${item.age}, status: ${item.status}, address: city: ${item.address.city}, street: ${item.address.street}, number: ${item.address.number}`;
+            div2.appendChild(blockUser2);
+            let hr = document.createElement('hr')
+            document.body.append(div2, hr);
+        }
+    }
+})

@@ -9,7 +9,7 @@ let form1 = document.form1;
 
 form1.onsubmit = function (e){
     e.preventDefault()
-    let array = ['bitch', 'fuck', 'porno'];
+    let array = ['bitch', 'fuck', 'ass'];
     for (const item of array) {
         if (this.sentence.value.includes(item)){
             alert('be gentle')

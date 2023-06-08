@@ -38,6 +38,8 @@
         document.body.append(div, br);
 
         button.onclick = function (){
+            button.innerText = 'Added';
+            button.disabled = true;
             let favorites = JSON.parse(localStorage.getItem('favorites')) || [];
             favorites.push(user);
             localStorage.setItem('favorites', JSON.stringify(favorites));

@@ -15,7 +15,7 @@ form1.addEventListener('submit', function (e){
         console.log(this.word.value);
     }
 
-    let array = ['fuck', 'pussylicker', 'bitch'];
+    let array = ['fuck', 'ass', 'bitch'];
     for (const item of array) {
         if (this.word.value === item){
             alert('Be gentle');
