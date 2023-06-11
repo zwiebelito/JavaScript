@@ -1,0 +1,62 @@
+/* post-details.html - блок з інфою про пост зверху. Коментарі - по 4 в ряд. */
+
+body {
+    background-color: #016458;
+    margin: 10px 0;
+}
+
+.wrap > h1 {
+    display: flex;
+    justify-content: center;
+    color: #9a8aff;
+    margin: 5vh 0;
+}
+
+.users-block{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.post {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: start;
+    background-color: #9a8aff;
+    width: 50vw;
+    height: 40vh;
+    padding-left: 10px;
+    border-radius: 5px;
+    border: 2px solid lavenderblush;
+    color: #01564c;
+}
+
+    h1{
+    display: flex;
+    justify-content: center;
+    color: #9a8aff;
+    margin: 10vh 0 7vh 0;
+}
+
+
+
+.comment {
+    display: grid;
+    justify-content: space-around;
+    grid-gap: 10px;
+    grid-template-columns: 23vw 23vw 23vw 23vw;
+}
+
+.commentDiv {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    border: 2px solid lavender;
+    border-radius: 5px;
+    height: 50vh;
+    padding-left: 10px;
+    color: lavender;
+}

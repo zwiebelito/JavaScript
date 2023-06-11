@@ -1,0 +1,46 @@
+/* index.html - всі блоки з user - по 2 в рядок. кнопки/аосилвння розташувати під інформацією про user. */
+
+body {
+    background-color: #016458;
+    margin: 10px 0;
+}
+
+#block {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 10px;
+    justify-items: center;
+}
+
+.userDiv {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #9a8aff;
+    width: 40vw;
+    height: 200px;
+    border-radius: 5px;
+    border: 2px solid lavenderblush;
+}
+
+.userDiv > h4 {
+    color: #016458;
+    margin: 0;
+}
+
+.link {
+    color: #016458;
+    text-decoration: none;
+    margin-top: 25px;
+    padding: 5px;
+    border: 1px solid #016458;
+    border-radius: 3px;
+    transition: 0.3s;
+}
+
+.link:hover{
+    transition: 0.3s ease;
+    background-color: #016458;
+    color: lavender;
+}

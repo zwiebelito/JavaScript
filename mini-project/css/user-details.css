@@ -1,0 +1,96 @@
+/* user-details.html - блок з інфою про user зверху сторінки. Кнопка нижчє, на 90% ширини сторінки, по центру.
+блоки з короткою іфною про post - в ряд по 5. */
+
+body {
+    background-color: #016458;
+    margin: 10px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+body > h1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #9a8aff;
+    margin: 5vh 0;
+}
+
+.info {
+    display: flex;
+    align-items: center;
+    background-color: #9a8aff;
+    width: 30vw;
+    height: 60vh;
+    border-radius: 5px;
+    border: 2px solid lavenderblush;
+    color: #01564c;
+}
+
+.showInfo {
+    color: #016458;
+    background-color: #9a8aff;
+    font-weight: bold;
+    text-decoration: none;
+    margin: 5vh 0;
+    padding: 15px;
+    border: 1px solid lavenderblush;
+    border-radius: 3px;
+    transition: 0.3s;
+}
+
+.showInfo:hover {
+    transition: 0.3s ease;
+    background-color: #004840;
+    color: lavender;
+}
+
+.posts {
+    display: grid;
+    justify-content: space-around;
+    grid-gap: 10px;
+    grid-template-columns: 15vw 15vw 15vw 15vw 15vw;
+}
+
+.post-block {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid lavender;
+    border-radius: 5px;
+}
+
+
+.post-block > .p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: lavender;
+    font-weight: bold;
+    padding: 5px;
+    height: 10vh;
+    width: 10vw;
+    margin: 10px;
+}
+
+.post-button {
+    background-color: #9a8aff;
+    border-radius: 5px;
+    border: 1px solid  #016458;
+    color: #016458;
+    font-weight: bold;
+    margin: 10px;
+    padding: 10px;
+    transition: 0.3s;
+}
+
+.post-button:hover{
+    transition: 0.3s ease;
+    background-color: #016458;
+    color: #9a8aff;
+    border: 1px solid lavender;
+    border-radius: 3px;
+}

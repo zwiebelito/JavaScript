@@ -6,9 +6,6 @@
 
 let form1 = document.form1;
 
-
-
-
 form1.addEventListener('submit', function (e){
     e.preventDefault();
     if (this.word.value){
