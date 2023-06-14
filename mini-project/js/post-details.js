@@ -14,19 +14,12 @@ fetch(`https://jsonplaceholder.typicode.com/posts/${post}`)
     .then(response => response.json())
     .then(post => {
 
-        const userId = document.createElement('p');
-        userId.innerHTML = `<b>User ID:</b> ${post.userId}`;
-
-        const postId = document.createElement('p');
-        postId.innerHTML = `<b>Post ID:</b> ${post.id}`;
-
-        const title = document.createElement('p');
-        title.innerHTML = `<b>Title:</b> ${post.title}`;
-
-        const pBody = document.createElement('p');
-        pBody.innerHTML = `<b>Body:</b> ${post.body}`;
-
-        postBlock.append(userId, postId, title, pBody);
+        for (const key in post) {
+            const postDiv = document.createElement('div');
+            postDiv.classList.add('postDiv');
+            postDiv.innerHTML = `<p><b>${key}:</b> ${post[key]}</p>`;
+            postBlock.appendChild(postDiv);
+        }
     });
 
 
@@ -42,20 +35,27 @@ fetch(`https://jsonplaceholder.typicode.com/posts/${post}/comments`)
             commentBlock.append(commentDiv);
 
             const postId = document.createElement('p');
+            postId.style.color = '#ffb399';
             postId.innerHTML = `<b>Post ID: </b>${comment.postId}`;
 
             const id = document.createElement('p');
+            id.style.color = '#99e6ff';
             id.innerHTML = `<b>ID: </b>${comment.id}`;
 
             const name = document.createElement('p');
+            name.style.color = '#9999ff';
             name.innerHTML = `<b>Name: </b>${comment.name}`;
 
             const email = document.createElement('p');
+            email.style.color = '#ff99ff';
             email.innerHTML = `<b>Email: </b>${comment.email}`;
 
             const body = document.createElement('p');
+            body.style.color = '#b3ff99';
             body.innerHTML = `<b>Body: </b>${comment.body}`;
 
             commentDiv.append(postId, id, name, email, body);
         }
     });
+
+
