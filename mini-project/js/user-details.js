@@ -62,8 +62,8 @@ btn.addEventListener('click', function (){
                         div.classList.add('post-block')
 
                         const p = document.createElement('p');
-                        p.innerText = post.title;
-                        p.classList.add('p');
+                        p.innerText = `ID: ${post.id} 
+                         Title: ${post.title}`;
 
                         const button = document.createElement('button');
                         button.classList.add('post-button')

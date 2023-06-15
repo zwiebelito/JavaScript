@@ -64,14 +64,14 @@ body > h1 {
 }
 
 
-.post-block > .p {
+.post-block > p {
     display: flex;
     justify-content: center;
     align-items: center;
     color: lavender;
     font-weight: bold;
     padding: 5px;
-    height: 10vh;
+    height: 15vh;
     width: 10vw;
     margin: 10px;
 }
